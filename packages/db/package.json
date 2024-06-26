@@ -1,0 +1,21 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:generate": "drizzle-kit generate --dialect=postgresql --schema=./src/schema.ts",
+    "migration:push": "node -r esbuild-register ./src/migrate.ts",
+    "migration:run": "drizzle-kit generate --dialect=postgresql --schema=./src/schema.ts && node -r esbuild-register ./src/migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.22.7",
+    "drizzle-orm": "^0.31.2",
+    "pg": "^8.12.0"
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "tenant_configuration" ADD COLUMN "identifier" varchar(256);

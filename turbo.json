@@ -16,6 +16,10 @@
     "deployment-app#dev": {
       "cache": false,
       "persistent": true
+    },
+    "db#migration:run": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

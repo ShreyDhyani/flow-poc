@@ -5,12 +5,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-// import "./tailwind.css";
+import "./tailwind.css";
 
-import styles from "./tailwind.css?url";
-import { LinksFunction } from "@remix-run/node";
+// import styles from "./tailwind.css?url";
+// import { LinksFunction } from "@remix-run/node";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+// export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,7 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="select-none">
         {children}
         <ScrollRestoration />
         <Scripts />
